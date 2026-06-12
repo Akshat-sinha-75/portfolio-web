@@ -26,6 +26,8 @@
     --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -174,8 +176,8 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 1px solid var(--accent-dark);
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -190,8 +192,8 @@ body.cursor-hover .cursor-dot {
 }
 
 body.cursor-hover .cursor-outline {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(26, 26, 26, 0.05);
     border-color: var(--accent-dark);
 }
@@ -668,6 +670,7 @@ body.cursor-light.cursor-hover .cursor-outline {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+
 }
 
 .skill-pill {
@@ -680,6 +683,7 @@ body.cursor-light.cursor-hover .cursor-outline {
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.3s ease;
+
 }
 
 .skill-pill span {
@@ -708,6 +712,7 @@ body.cursor-light.cursor-hover .cursor-outline {
 
 .cert-list {
     border-top: 1px solid var(--border-light);
+    transition: background-color 0.4s ease, padding-left 0.4s ease, padding-right 0.4s ease;
 }
 
 .cert-item {
@@ -717,13 +722,14 @@ body.cursor-light.cursor-hover .cursor-outline {
     align-items: center;
     padding: 2.5rem 0;
     border-bottom: 1px solid var(--border-light);
-    transition: background-color 0.4s ease, padding-left 0.4s ease, padding-right 0.4s ease;
+
 }
 
 .cert-item:hover {
     background-color: rgba(200, 185, 154, 0.15);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    transition: background-color 0.4s ease, padding-left 0.4s ease, padding-right 0.4s ease;
 }
 
 .cert-bullet {
@@ -731,6 +737,7 @@ body.cursor-light.cursor-hover .cursor-outline {
     height: 4px;
     background-color: var(--accent-dark);
     border-radius: 50%;
+
 }
 
 .cert-title {

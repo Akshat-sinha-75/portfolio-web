@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshat Sinha | ML Engineer & Full-Stack Developer</title>
-    <meta name="description" content="Portfolio of Akshat Sinha, Machine Learning Engineer & Full-Stack Developer focused on shipping fast and building production-ready AI systems.">
-    
+    <meta name="description"
+        content="Portfolio of Akshat Sinha, Machine Learning Engineer & Full-Stack Developer focused on shipping fast and building production-ready AI systems.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="loading">
     <!-- Preloader -->
     <div id="preloader" class="preloader">
         <div class="preloader-bg-grid"></div>
-        
+
         <div class="preloader-corner top-left"></div>
         <div class="preloader-corner top-right"></div>
         <div class="preloader-corner bottom-left"></div>
         <div class="preloader-corner bottom-right"></div>
-        
+
         <div class="preloader-top-bar" id="preloader-top-bar"></div>
-        
+
         <div class="preloader-hud top-left-hud" id="hud-coords">SYS.LOC // 0x0000</div>
         <div class="preloader-hud top-right-hud">
             <span class="pulse-dot"></span> SYS.ONLINE
         </div>
-        
+
         <div class="preloader-content">
             <div class="preloader-text" id="preloader-text"></div>
             <div class="preloader-subtext" id="preloader-subtext">[ ML_ENGINEER / FULL_STACK ]</div>
         </div>
-        
+
         <div class="preloader-logs" id="preloader-logs"></div>
     </div>
 
@@ -45,7 +50,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo magnetic" data-magnetic>Akshat Sinha.</a>
+            <a href="#hero" class="logo magnetic" data-magnetic>Akshat Sinha.</a>
             <div class="nav-links">
                 <a href="#technical-arsenal" class="nav-link">TECHNICAL ARSENAL</a>
                 <a href="#featured-work" class="nav-link">FEATURED WORK</a>
@@ -53,11 +58,23 @@
                 <a href="#contact" class="nav-link">CONTACT</a>
             </div>
             <div class="nav-socials">
-                <a href="#" class="icon-btn magnetic" aria-label="LinkedIn" data-magnetic>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <a href="https://www.linkedin.com/in/akshat-sinha-dev/" class="icon-btn magnetic" aria-label="LinkedIn"
+                    data-magnetic>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
                 </a>
-                <a href="#" class="icon-btn magnetic" aria-label="GitHub" data-magnetic>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <a href="https://github.com/Akshat-sinha-75" class="icon-btn magnetic" aria-label="GitHub"
+                    data-magnetic>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
                 </a>
                 <button class="mobile-menu-toggle" aria-label="Toggle Menu">
                     <span></span>
@@ -74,17 +91,21 @@
             <div class="container hero-container">
                 <div class="hero-content reveal-stagger">
                     <h1 class="hero-title reveal-item">Akshat Sinha</h1>
-                    <p class="hero-subtitle reveal-item">Machine Learning Engineer & Full-Stack Developer. Focused on shipping fast and building production-ready AI systems.</p>
+                    <p class="hero-subtitle reveal-item">Machine Learning Engineer & Full-Stack Developer. Focused on
+                        shipping fast and building production-ready AI systems.</p>
                     <div class="hero-actions reveal-item">
                         <a href="#" class="btn btn-primary magnetic" data-magnetic>Download Resume</a>
-                        <a href="#" class="btn btn-outline magnetic" data-magnetic>LinkedIn</a>
-                        <a href="#" class="btn btn-outline magnetic" data-magnetic>GitHub</a>
+                        <a href="https://www.linkedin.com/in/akshat-sinha-dev/" class="btn btn-outline magnetic"
+                            data-magnetic>LinkedIn</a>
+                        <a href="https://github.com/Akshat-sinha-75" class="btn btn-outline magnetic"
+                            data-magnetic>GitHub</a>
                     </div>
                 </div>
                 <div class="hero-visual reveal-scale">
                     <div class="avatar-frame parallax-frame" data-parallax>
                         <div class="avatar-inner">
-                            <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Akshat&backgroundColor=c8b99a" alt="Akshat Sinha Avatar" class="avatar-img">
+                            <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Akshat&backgroundColor=c8b99a"
+                                alt="Akshat Sinha Avatar" class="avatar-img">
                         </div>
                         <div class="floating-badge">PORTFOLIO</div>
                     </div>
@@ -102,12 +123,14 @@
                 <h2 class="section-title text-center">Bridging AI and Scalable Architecture</h2>
                 <div class="about-bio text-center">
                     <p>Currently pursuing a B.E. in CSE-AI/ML at Chandigarh University (CGPA: 7.88).</p>
-                    <p>Experienced in developing scalable applications using FastAPI, Django, React, and AWS, with hands-on work in real-time data and AI pipelines.</p>
+                    <p>Experienced in developing scalable applications using FastAPI, Django, React, and AWS, with
+                        hands-on work in real-time data and AI pipelines.</p>
                 </div>
                 <div class="divider"></div>
-                
+
                 <div class="quote-container">
-                    <h3 class="ghost-quote text-reveal">"Focused on shipping fast and building production-ready AI systems."</h3>
+                    <h3 class="ghost-quote text-reveal">"Focused on shipping fast and building production-ready AI
+                        systems."</h3>
                 </div>
             </div>
         </section>
@@ -119,7 +142,8 @@
                 <div class="project-row reveal-fade-up">
                     <div class="project-visual">
                         <div class="project-frame hover-zoom">
-                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop" alt="QuickAid" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop"
+                                alt="QuickAid" class="project-img">
                         </div>
                     </div>
                     <div class="project-content">
@@ -137,7 +161,8 @@
                 <div class="project-row reverse reveal-fade-up">
                     <div class="project-visual">
                         <div class="project-frame hover-zoom">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="BlockEstate" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                                alt="BlockEstate" class="project-img">
                         </div>
                     </div>
                     <div class="project-content">
@@ -154,7 +179,8 @@
                 <div class="project-row reveal-fade-up">
                     <div class="project-visual">
                         <div class="project-frame hover-zoom">
-                            <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?q=80&w=800&auto=format&fit=crop" alt="Realtime Voice Transcription" class="project-img">
+                            <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?q=80&w=800&auto=format&fit=crop"
+                                alt="Realtime Voice Transcription" class="project-img">
                         </div>
                     </div>
                     <div class="project-content">
@@ -174,26 +200,29 @@
             <div class="container arsenal-container">
                 <div class="arsenal-left reveal-stagger">
                     <h2 class="section-title reveal-item">Technical<br>Arsenal</h2>
-                    <p class="arsenal-desc reveal-item">A curated selection of languages, frameworks, and tools utilized to architect robust digital experiences and intelligent systems.</p>
-                    
+                    <p class="arsenal-desc reveal-item">A curated selection of languages, frameworks, and tools utilized
+                        to architect robust digital experiences and intelligent systems.</p>
+
                     <blockquote class="arsenal-quote reveal-item">
-                        "The elegance of a solution lies not in the complexity of the code, but in the clarity of its architecture."
+                        "The elegance of a solution lies not in the complexity of the code, but in the clarity of its
+                        architecture."
                     </blockquote>
-                    
+
                     <div class="arsenal-image-container reveal-item hover-zoom">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop" alt="Architecture abstract" class="arsenal-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"
+                            alt="Architecture abstract" class="arsenal-img">
                         <div class="image-caption">CONTINUOUS INTEGRATION OF NEW PARADIGMS</div>
                     </div>
                 </div>
-                
+
                 <div class="arsenal-right">
                     <!-- Category 1 -->
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">Languages</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> Python</span>
-                            <span class="skill-pill"><span>•</span> JavaScript</span>
-                            <span class="skill-pill"><span>•</span> C++</span>
+                            <span class="skill-pill"> Python</span>
+                            <span class="skill-pill"> JavaScript</span>
+                            <span class="skill-pill"> C++</span>
                         </div>
                     </div>
 
@@ -201,10 +230,10 @@
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">AI & Machine Learning</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> LangChain</span>
-                            <span class="skill-pill"><span>•</span> PyTorch</span>
-                            <span class="skill-pill"><span>•</span> Scikit-learn</span>
-                            <span class="skill-pill"><span>•</span> Model Training</span>
+                            <span class="skill-pill"> LangChain</span>
+                            <span class="skill-pill"> PyTorch</span>
+                            <span class="skill-pill"> Scikit-learn</span>
+                            <span class="skill-pill"> Model Training</span>
                         </div>
                     </div>
 
@@ -212,10 +241,10 @@
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">Frontend Development</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> React.js</span>
-                            <span class="skill-pill"><span>•</span> Next.js</span>
-                            <span class="skill-pill"><span>•</span> HTML/CSS</span>
-                            <span class="skill-pill"><span>•</span> SCSS</span>
+                            <span class="skill-pill"> React.js</span>
+                            <span class="skill-pill"> Next.js</span>
+                            <span class="skill-pill"> HTML/CSS</span>
+                            <span class="skill-pill"> SCSS</span>
                         </div>
                     </div>
 
@@ -223,10 +252,10 @@
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">Backend Architecture</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> FastAPI</span>
-                            <span class="skill-pill"><span>•</span> Django</span>
-                            <span class="skill-pill"><span>•</span> Node.js</span>
-                            <span class="skill-pill"><span>•</span> Express.js</span>
+                            <span class="skill-pill"> FastAPI</span>
+                            <span class="skill-pill"> Django</span>
+                            <span class="skill-pill"> Node.js</span>
+                            <span class="skill-pill"> Express.js</span>
                         </div>
                     </div>
 
@@ -234,10 +263,10 @@
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">Analytics & Visualization</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> Pandas</span>
-                            <span class="skill-pill"><span>•</span> NumPy</span>
-                            <span class="skill-pill"><span>•</span> Matplotlib</span>
-                            <span class="skill-pill"><span>•</span> Seaborn</span>
+                            <span class="skill-pill"> Pandas</span>
+                            <span class="skill-pill"> NumPy</span>
+                            <span class="skill-pill"> Matplotlib</span>
+                            <span class="skill-pill"> Seaborn</span>
                         </div>
                     </div>
 
@@ -245,10 +274,10 @@
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">Cloud & DevOps</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> AWS (S3, EC2, IAM)</span>
-                            <span class="skill-pill"><span>•</span> Git</span>
-                            <span class="skill-pill"><span>•</span> Docker</span>
-                            <span class="skill-pill"><span>•</span> Apache Kafka</span>
+                            <span class="skill-pill"> AWS (S3, EC2, IAM)</span>
+                            <span class="skill-pill"> Git</span>
+                            <span class="skill-pill"> Docker</span>
+                            <span class="skill-pill"> Apache Kafka</span>
                         </div>
                     </div>
 
@@ -256,10 +285,10 @@
                     <div class="skill-category reveal-fade-up">
                         <h3 class="category-title">Database Systems</h3>
                         <div class="skill-tags">
-                            <span class="skill-pill"><span>•</span> MongoDB</span>
-                            <span class="skill-pill"><span>•</span> PostgreSQL</span>
-                            <span class="skill-pill"><span>•</span> MySQL</span>
-                            <span class="skill-pill"><span>•</span> Supabase</span>
+                            <span class="skill-pill"> MongoDB</span>
+                            <span class="skill-pill"> PostgreSQL</span>
+                            <span class="skill-pill"> MySQL</span>
+                            <span class="skill-pill"> Supabase</span>
                         </div>
                     </div>
                 </div>
@@ -272,7 +301,7 @@
                 <div class="cert-header reveal-fade-up">
                     <p class="cert-subtitle">Verified expertise in Cloud, AI, and Project Management.</p>
                 </div>
-                
+
                 <div class="cert-list">
                     <!-- Cert 1 -->
                     <div class="cert-item reveal-fade-up">
@@ -281,9 +310,10 @@
                             <h3 class="cert-title">AWS Cloud Practitioner</h3>
                             <div class="cert-issuer">AMAZON WEB SERVICES</div>
                         </div>
-                        <a href="#" class="btn btn-outline cert-btn magnetic" data-magnetic>Verify Credential <span class="arrow">→</span></a>
+                        <a href="#" class="btn btn-outline cert-btn magnetic" data-magnetic>Verify Credential <span
+                                class="arrow">→</span></a>
                     </div>
-                    
+
                     <!-- Cert 2 -->
                     <div class="cert-item reveal-fade-up">
                         <div class="cert-bullet"></div>
@@ -292,7 +322,7 @@
                             <div class="cert-issuer">IBM</div>
                         </div>
                     </div>
-                    
+
                     <!-- Cert 3 -->
                     <div class="cert-item reveal-fade-up">
                         <div class="cert-bullet"></div>
@@ -300,9 +330,10 @@
                             <h3 class="cert-title">Google Project Management</h3>
                             <div class="cert-issuer">GOOGLE</div>
                         </div>
-                        <a href="#" class="btn btn-outline cert-btn magnetic" data-magnetic>Verify Credential <span class="arrow">→</span></a>
+                        <a href="#" class="btn btn-outline cert-btn magnetic" data-magnetic>Verify Credential <span
+                                class="arrow">→</span></a>
                     </div>
-                    
+
                     <!-- Cert 4 -->
                     <div class="cert-item reveal-fade-up">
                         <div class="cert-bullet"></div>
@@ -310,7 +341,8 @@
                             <h3 class="cert-title">Vanderbilt Prompt Engineering</h3>
                             <div class="cert-issuer">VANDERBILT UNIVERSITY</div>
                         </div>
-                        <a href="#" class="btn btn-outline cert-btn magnetic" data-magnetic>Verify Credential <span class="arrow">→</span></a>
+                        <a href="#" class="btn btn-outline cert-btn magnetic" data-magnetic>Verify Credential <span
+                                class="arrow">→</span></a>
                     </div>
                 </div>
             </div>
@@ -323,9 +355,10 @@
             <div class="footer-grid reveal-stagger">
                 <div class="footer-brand reveal-item">
                     <h2>Akshat Sinha</h2>
-                    <p>Machine Learning Engineer & Full-Stack Developer. Focused on shipping fast and building production-ready AI systems.</p>
+                    <p>Machine Learning Engineer & Full-Stack Developer. Focused on shipping fast and building
+                        production-ready AI systems.</p>
                 </div>
-                
+
                 <div class="footer-nav reveal-item">
                     <h3 class="footer-heading">NAVIGATION</h3>
                     <ul class="footer-links">
@@ -337,7 +370,7 @@
                         <li><a href="#contact" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-connect reveal-item">
                     <h3 class="footer-heading">CONNECT</h3>
                     <ul class="footer-links">
@@ -347,7 +380,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="copyright">© 2026 Akshat Sinha. All rights reserved.</div>
                 <button class="back-to-top" id="backToTop">Back to Top ↑</button>
@@ -357,4 +390,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const dx = mouseX - outlineX;
             const dy = mouseY - outlineY;
 
-            outlineX += dx * 0.15;
-            outlineY += dy * 0.15;
+            outlineX += dx * 0.27;
+            outlineY += dy * 0.27;
 
             cursorOutline.style.left = `${outlineX}px`;
             cursorOutline.style.top = `${outlineY}px`;
@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
     magneticElements.forEach(el => {
         el.addEventListener('mousemove', (e) => {
             const rect = el.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+            const x = e.clientX - rect.left - rect.width / 4;
+            const y = e.clientY - rect.top - rect.height / 4;
 
-            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            el.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
         });
 
         el.addEventListener('mouseleave', () => {
