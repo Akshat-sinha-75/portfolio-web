@@ -70,10 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const parallaxFrame = document.querySelector('[data-parallax]');
     if (parallaxFrame && !isTouchDevice()) {
         window.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth / 2 - e.clientX) * 0.02;
-            const y = (window.innerHeight / 2 - e.clientY) * 0.02;
+            const x = (window.innerWidth / 2 - e.clientX) * 0.005;
+            const y = (window.innerHeight / 2 - e.clientY) * 0.005;
 
-            parallaxFrame.style.transform = `translate(${x}px, ${y}px) rotateY(${x * -0.5}deg) rotateX(${y * 0.5}deg)`;
+            parallaxFrame.style.transform = `translate(${x}px, ${y}px) rotateY(${x * -0.2}deg) rotateX(${y * 0.2}deg)`;
         });
     }
 
@@ -106,13 +106,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Sticky Navbar
     const navbar = document.getElementById('navbar');
+    const heroSection = document.getElementById('hero');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        // Trigger point is when the user scrolls past the hero section (minus approximate navbar height)
+        const scrollThreshold = heroSection ? heroSection.offsetHeight - 80 : 50;
+
+        if (window.scrollY > scrollThreshold) {
             navbar.classList.add('scrolled');
+            if (navbar.matches(':hover') && !isTouchDevice()) {
+                document.body.classList.add('cursor-light');
+            }
         } else {
             navbar.classList.remove('scrolled');
+            if (navbar.matches(':hover') && !isTouchDevice()) {
+                document.body.classList.remove('cursor-light');
+            }
         }
     });
+
+    if (navbar && !isTouchDevice()) {
+        navbar.addEventListener('mouseenter', () => {
+            if (navbar.classList.contains('scrolled')) {
+                document.body.classList.add('cursor-light');
+            }
+        });
+        navbar.addEventListener('mouseleave', () => {
+            document.body.classList.remove('cursor-light');
+        });
+    }
 
     // 5.5 Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -124,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             navbar.classList.toggle('menu-open');
-            
+
             // Prevent scrolling when menu is open
             if (mobileMenu.classList.contains('active')) {
                 document.body.style.overflow = 'hidden';
@@ -173,14 +194,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 8. Footer Light Cursor
-    const footer = document.querySelector('.footer');
-    if (footer && !isTouchDevice()) {
-        footer.addEventListener('mouseenter', () => {
-            document.body.classList.add('cursor-light');
-        });
-        footer.addEventListener('mouseleave', () => {
-            document.body.classList.remove('cursor-light');
+    // 8. Dark Sections Light Cursor
+    const darkSections = document.querySelectorAll('.footer, .connect-section.dark-theme');
+    if (!isTouchDevice()) {
+        darkSections.forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                document.body.classList.add('cursor-light');
+            });
+            section.addEventListener('mouseleave', () => {
+                document.body.classList.remove('cursor-light');
+            });
         });
     }
 
@@ -280,53 +303,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // 10. Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('form-status');
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+        contactForm.addEventListener('submit', (e) => {
+            // e.preventDefault(); // Temporarily disabled for activation
             
             const submitBtn = contactForm.querySelector('.submit-btn');
             const submitText = submitBtn.querySelector('.submit-text');
-            const originalText = submitText.innerHTML;
             
             // Loading state
-            submitText.innerHTML = 'Sending...';
+            submitText.innerHTML = 'Redirecting to activation...';
             submitBtn.style.opacity = '0.7';
-            submitBtn.style.pointerEvents = 'none';
-            formStatus.className = 'form-status';
-            formStatus.textContent = '';
-            
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: new FormData(contactForm),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    formStatus.className = 'form-status success';
-                    formStatus.textContent = 'Thanks for reaching out! I will get back to you soon.';
-                    contactForm.reset();
-                } else {
-                    const data = await response.json();
-                    if (Object.hasOwn(data, 'errors')) {
-                        formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
-                    } else {
-                        formStatus.textContent = 'Oops! There was a problem submitting your form.';
-                    }
-                    formStatus.className = 'form-status error';
-                }
-            } catch (error) {
-                formStatus.className = 'form-status error';
-                formStatus.textContent = 'Oops! There was a problem submitting your form.';
-            } finally {
-                // Reset button state
-                submitText.innerHTML = originalText;
-                submitBtn.style.opacity = '1';
-                submitBtn.style.pointerEvents = 'auto';
-            }
+            // Allow native form submission to proceed so formsubmit.co can send the activation email.
         });
     }
 });

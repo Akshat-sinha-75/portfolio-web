@@ -176,8 +176,8 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: 1px solid var(--accent-dark);
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -192,8 +192,8 @@ body.cursor-hover .cursor-dot {
 }
 
 body.cursor-hover .cursor-outline {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: rgba(26, 26, 26, 0.05);
     border-color: var(--accent-dark);
 }
@@ -218,15 +218,42 @@ body.cursor-light.cursor-hover .cursor-outline {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 24px 0;
-    transition: var(--transition-normal);
+    padding: 16px 0;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease-in
 }
 
 .navbar.scrolled {
-    padding: 16px 0;
-    background-color: rgba(245, 243, 239, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-light);
+    /* padding: 16px 0; */
+    background-color: rgba(52, 52, 52, 0.95);
+    /* backdrop-filter: blur(12px); */
+    /* border-bottom: 1px solid var(--border-dark); */
+    /* color: var(--bg-primary); */
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease-in
+}
+
+.navbar.scrolled .logo,
+.navbar.scrolled .nav-link {
+    color: var(--bg-primary);
+}
+
+.navbar.scrolled .nav-link::before {
+    background-color: var(--bg-primary);
+}
+
+.navbar.scrolled .icon-btn {
+    border-color: var(--bg-primary);
+    color: var(--bg-primary);
+}
+
+.navbar.scrolled .icon-btn:hover {
+    background-color: var(--bg-primary);
+    color: var(--bg-dark);
+}
+
+.navbar.scrolled .mobile-menu-toggle span {
+    background-color: var(--bg-primary);
 }
 
 .nav-container {
@@ -370,7 +397,7 @@ body.cursor-light.cursor-hover .cursor-outline {
     gap: 1rem;
 }
 
-.avatar-frame {
+/* .avatar-frame {
     position: relative;
     padding: 1.5rem;
     border: 1.5px solid var(--border-light);
@@ -378,9 +405,9 @@ body.cursor-light.cursor-hover .cursor-outline {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.avatar-inner {
+/* .avatar-inner {
     width: 100%;
     height: 100%;
     background-color: var(--bg-dark);
@@ -388,13 +415,14 @@ body.cursor-light.cursor-hover .cursor-outline {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
+} */
 
 .avatar-img {
     width: 70%;
     height: 70%;
-    border-radius: 50%;
+    border-radius: 20%;
     object-fit: cover;
+    margin-left: 150px;
 }
 
 .floating-badge {
@@ -522,8 +550,8 @@ body.cursor-light.cursor-hover .cursor-outline {
 
 .project-img {
     width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
+    aspect-ratio: 18/11;
+    object-fit: fill;
     filter: grayscale(20%);
     transition: filter 0.5s;
 }
@@ -575,6 +603,10 @@ body.cursor-light.cursor-hover .cursor-outline {
     padding-bottom: 4px;
 }
 
+.text-link:hover {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .text-link::after {
     content: '';
     position: absolute;
@@ -592,12 +624,14 @@ body.cursor-light.cursor-hover .cursor-outline {
     background-color: var(--accent-dark);
 }
 
-.arrow {
+.text-link:hover .arrow {
+    transform: translateX(4px);
     transition: transform 0.3s ease;
+
 }
 
-.text-link:hover .arrow {
-    transform: translateX(5px);
+.arrow {
+    transition: transform 0.3s ease;
 }
 
 /* Arsenal Section */
@@ -1127,9 +1161,9 @@ body.cursor-light.cursor-hover .cursor-outline {
     gap: 1.5rem;
 }
 
-.text-link {
+.connect-section .text-link {
     color: var(--bg-primary);
-    text-decoration: none;
+    text-decoration: initial;
     font-size: 1.1rem;
     display: inline-flex;
     align-items: center;
@@ -1137,16 +1171,27 @@ body.cursor-light.cursor-hover .cursor-outline {
     transition: color 0.3s ease;
 }
 
-.text-link:hover {
-    color: var(--accent-tan);
+.connect-section .text-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
 }
 
-.text-link .arrow {
+.connect-section .text-link:hover {
+    color: var(--accent-tan);
+
+}
+
+.connect-section .text-link .arrow {
     transition: transform 0.3s ease;
 }
 
-.text-link:hover .arrow {
-    transform: translateX(5px) rotate(-45deg);
+.connect-section .text-link:hover .arrow {
+    transform: rotate(-30deg);
+    transition: transform 0.3s ease;
 }
 
 .connect-form-wrapper {
@@ -1196,8 +1241,8 @@ body.cursor-light.cursor-hover .cursor-outline {
 }
 
 /* Floating Label Animation */
-.form-input.dark-input:focus ~ .form-label.dark-label,
-.form-input.dark-input:not(:placeholder-shown) ~ .form-label.dark-label {
+.form-input.dark-input:focus~.form-label.dark-label,
+.form-input.dark-input:not(:placeholder-shown)~.form-label.dark-label {
     top: -20px;
     font-size: 0.8rem;
     color: var(--accent-tan);
@@ -1293,7 +1338,8 @@ body.cursor-light.cursor-hover .cursor-outline {
         width: 85%;
         max-width: 400px;
         height: 100vh;
-        background-color: rgba(26, 26, 26, 0.98); /* dark background */
+        background-color: rgba(26, 26, 26, 0.98);
+        /* dark background */
         backdrop-filter: blur(15px);
         border-left: 1px solid var(--border-dark);
         z-index: 999;
@@ -1327,7 +1373,8 @@ body.cursor-light.cursor-hover .cursor-outline {
     .mobile-nav-link {
         font-family: var(--font-body);
         font-size: 1.25rem;
-        color: var(--bg-primary); /* light theme font */
+        color: var(--bg-primary);
+        /* light theme font */
         font-weight: 400;
         letter-spacing: 0.1em;
         position: relative;
@@ -1335,12 +1382,12 @@ body.cursor-light.cursor-hover .cursor-outline {
         display: inline-block;
         transform-origin: left center;
     }
-    
+
     .mobile-nav-link:active {
         transform: scale(0.95);
         color: var(--accent-tan);
     }
-    
+
     .mobile-nav-link::after {
         content: '';
         position: absolute;
@@ -1366,7 +1413,8 @@ body.cursor-light.cursor-hover .cursor-outline {
     }
 
     .mobile-nav-socials a {
-        color: var(--bg-primary); /* light theme font */
+        color: var(--bg-primary);
+        /* light theme font */
         font-size: 0.85rem;
         font-weight: 500;
         text-transform: uppercase;
@@ -1376,12 +1424,12 @@ body.cursor-light.cursor-hover .cursor-outline {
         transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
         display: inline-block;
     }
-    
+
     .mobile-nav-socials a:active {
         transform: scale(0.95);
         color: var(--accent-tan);
     }
-    
+
     .mobile-nav-socials a::after {
         content: '';
         position: absolute;
