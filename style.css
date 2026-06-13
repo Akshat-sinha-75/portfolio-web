@@ -260,6 +260,10 @@ body.cursor-light.cursor-hover .cursor-outline {
     overflow: hidden;
 }
 
+.nav-link:hover {
+    font-weight: 1000;
+}
+
 
 .nav-link::before {
     content: '';
