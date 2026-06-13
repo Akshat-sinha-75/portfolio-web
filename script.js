@@ -305,16 +305,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const formStatus = document.getElementById('form-status');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            // e.preventDefault(); // Temporarily disabled for activation
-            
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
             const submitBtn = contactForm.querySelector('.submit-btn');
             const submitText = submitBtn.querySelector('.submit-text');
-            
+            const originalText = submitText.innerHTML;
+
             // Loading state
-            submitText.innerHTML = 'Redirecting to activation...';
+            submitText.innerHTML = 'Sending...';
             submitBtn.style.opacity = '0.7';
-            // Allow native form submission to proceed so formsubmit.co can send the activation email.
+            submitBtn.style.pointerEvents = 'none';
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = 'Thanks for reaching out! I will get back to you soon.';
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        formStatus.textContent = 'Oops! There was a problem submitting your form.';
+                    }
+                    formStatus.className = 'form-status error';
+                }
+            } catch (error) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Oops! There was a problem submitting your form.';
+            } finally {
+                submitText.innerHTML = originalText;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.pointerEvents = 'auto';
+            }
         });
     }
 });
