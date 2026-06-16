@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./assets/thumbnail.png">
+    <link rel="icon" href="icon.ico" type="image/icon type">
+    <title>Projects | Akshat Sinha — ML Engineer & Full-Stack Developer</title>
+    <meta name="description"
+        content="Explore all projects by Akshat Sinha — from AI-powered diagnostics to Web3 property registration and real-time transcription systems.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+    <!-- Parallax Fixed Background -->
+    <div class="projects-bg"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="./index.html#hero" class="logo magnetic" data-magnetic>Akshat Sinha.</a>
+            <div class="nav-links">
+                <a href="./index.html#technical-arsenal" class="nav-link">TECHNICAL ARSENAL</a>
+                <a href="./index.html#featured-work" class="nav-link">FEATURED WORK</a>
+                <a href="./index.html#certifications" class="nav-link">CERTIFICATIONS</a>
+                <a href="./index.html#connect" class="nav-link">CONNECT</a>
+            </div>
+            <div class="nav-socials">
+                <a href="https://www.linkedin.com/in/akshat-sinha-dev/" class="icon-btn magnetic" aria-label="LinkedIn"
+                    data-magnetic>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                        </path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://github.com/Akshat-sinha-75" class="icon-btn magnetic" aria-label="GitHub"
+                    data-magnetic>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-nav-links">
+                <a href="./index.html#technical-arsenal" class="mobile-nav-link">TECHNICAL ARSENAL</a>
+                <a href="./index.html#featured-work" class="mobile-nav-link">FEATURED WORK</a>
+                <a href="./index.html#certifications" class="mobile-nav-link">CERTIFICATIONS</a>
+                <a href="./index.html#connect" class="mobile-nav-link">CONNECT</a>
+            </div>
+            <div class="mobile-nav-socials">
+                <a href="https://www.linkedin.com/in/akshat-sinha-dev/" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/Akshat-sinha-75" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Right-Side Dot Navigation -->
+    <div class="dot-nav" id="dot-nav">
+        <div class="dot-nav-item">
+            <button class="dot-nav-dot active" data-target="project-1" aria-label="QuickAid"></button>
+            <span class="dot-nav-tooltip">QuickAid</span>
+        </div>
+        <div class="dot-nav-item">
+            <button class="dot-nav-dot" data-target="project-2" aria-label="BlockEstate"></button>
+            <span class="dot-nav-tooltip">BlockEstate</span>
+        </div>
+        <div class="dot-nav-item">
+            <button class="dot-nav-dot" data-target="project-3" aria-label="Realtime Voice"></button>
+            <span class="dot-nav-tooltip">Voice Transcription</span>
+        </div>
+        <div class="dot-nav-item">
+            <button class="dot-nav-dot" data-target="project-4" aria-label="AI Resume Screener"></button>
+            <span class="dot-nav-tooltip">AI Resume Screener</span>
+        </div>
+        <div class="dot-nav-item">
+            <button class="dot-nav-dot" data-target="project-5" aria-label="Smart Traffic Monitor"></button>
+            <span class="dot-nav-tooltip">Traffic Monitor</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="projects-hero">
+            <div class="projects-hero-inner">
+                <a href="./index.html" class="projects-back-link">
+                    <span class="back-arrow">←</span> Back to Portfolio
+                </a>
+                <h1 class="projects-page-title">All Projects</h1>
+                <p class="projects-page-subtitle">A comprehensive collection of projects spanning AI/ML, full-stack
+                    development, and emerging technologies.</p>
+                <div class="projects-count">5 PROJECTS</div>
+            </div>
+        </section>
+
+        <!-- Projects Scroll Container -->
+        <div class="projects-scroll-container">
+
+            <!-- Project 1: QuickAid -->
+            <section class="project-section" id="project-1">
+                <div class="project-section-inner">
+                    <div class="project-section-visual">
+                        <div class="project-section-frame hover-zoom">
+                            <img src="./quick-aid.png" alt="QuickAid — AI Wound Diagnostics"
+                                class="project-section-img">
+                        </div>
+                    </div>
+                    <div class="project-section-content">
+                        <div class="project-section-number">01</div>
+                        <h2 class="project-section-title">QuickAid</h2>
+                        <p class="project-section-desc">A dual-stage AI pipeline for wound diagnostics that combines
+                            image classification with severity assessment. The system uses deep learning models to
+                            identify wound types and provide actionable first-aid recommendations in real-time.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">PyTorch</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">CNN</span>
+                            <span class="tech-pill">Transfer Learning</span>
+                        </div>
+                        <div class="project-section-links">
+                            <a href="#" class="text-link">Live Demo <span class="arrow">→</span></a>
+                            <a href="#" class="text-link">GitHub <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="project-divider">
+                <div class="project-divider-line"></div>
+            </div>
+
+            <!-- Project 2: BlockEstate -->
+            <section class="project-section" id="project-2">
+                <div class="project-section-inner">
+                    <div class="project-section-visual">
+                        <div class="project-section-frame hover-zoom">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                                alt="BlockEstate — Web3 Property Registration" class="project-section-img">
+                        </div>
+                    </div>
+                    <div class="project-section-content">
+                        <div class="project-section-number">02</div>
+                        <h2 class="project-section-title">BlockEstate</h2>
+                        <p class="project-section-desc">A decentralized property registration platform built on the
+                            Solana blockchain. Enables transparent, tamper-proof land record management with smart
+                            contract-driven ownership transfers and verification workflows.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">Solana</span>
+                            <span class="tech-pill">Rust</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Web3.js</span>
+                            <span class="tech-pill">Anchor</span>
+                        </div>
+                        <div class="project-section-links">
+                            <a href="#" class="text-link">GitHub <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="project-divider">
+                <div class="project-divider-line"></div>
+            </div>
+
+            <!-- Project 3: Realtime Voice Transcription -->
+            <section class="project-section" id="project-3">
+                <div class="project-section-inner">
+                    <div class="project-section-visual">
+                        <div class="project-section-frame hover-zoom">
+                            <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?q=80&w=800&auto=format&fit=crop"
+                                alt="Realtime Voice Transcription" class="project-section-img">
+                        </div>
+                    </div>
+                    <div class="project-section-content">
+                        <div class="project-section-number">03</div>
+                        <h2 class="project-section-title">Realtime Voice<br>Transcription</h2>
+                        <p class="project-section-desc">A real-time speech-to-text pipeline leveraging the Vosk speech
+                            recognition engine integrated with a Django backend. Supports multiple languages and
+                            delivers
+                            low-latency transcription via WebSocket connections.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">Vosk</span>
+                            <span class="tech-pill">Django</span>
+                            <span class="tech-pill">WebSocket</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">JavaScript</span>
+                        </div>
+                        <div class="project-section-links">
+                            <a href="#" class="text-link">GitHub <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="project-divider">
+                <div class="project-divider-line"></div>
+            </div>
+
+            <!-- Project 4: AI Resume Screener -->
+            <section class="project-section" id="project-4">
+                <div class="project-section-inner">
+                    <div class="project-section-visual">
+                        <div class="project-section-frame hover-zoom">
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop"
+                                alt="AI Resume Screener" class="project-section-img">
+                        </div>
+                    </div>
+                    <div class="project-section-content">
+                        <div class="project-section-number">04</div>
+                        <h2 class="project-section-title">AI Resume<br>Screener</h2>
+                        <p class="project-section-desc">An LLM-powered resume parsing and ranking system that
+                            automates candidate screening. Uses natural language understanding to extract skills,
+                            experience, and qualifications, then scores candidates against job descriptions with
+                            explainable AI reasoning.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">LangChain</span>
+                            <span class="tech-pill">OpenAI API</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">PostgreSQL</span>
+                        </div>
+                        <div class="project-section-links">
+                            <a href="#" class="text-link">GitHub <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="project-divider">
+                <div class="project-divider-line"></div>
+            </div>
+
+            <!-- Project 5: Smart Traffic Monitor -->
+            <section class="project-section" id="project-5">
+                <div class="project-section-inner">
+                    <div class="project-section-visual">
+                        <div class="project-section-frame hover-zoom">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop"
+                                alt="Smart Traffic Monitor" class="project-section-img">
+                        </div>
+                    </div>
+                    <div class="project-section-content">
+                        <div class="project-section-number">05</div>
+                        <h2 class="project-section-title">Smart Traffic<br>Monitor</h2>
+                        <p class="project-section-desc">A real-time traffic flow analysis system powered by computer
+                            vision. Detects vehicles, estimates traffic density, and predicts congestion patterns using
+                            YOLO object detection with a custom-trained model on Indian road datasets.</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">YOLOv8</span>
+                            <span class="tech-pill">OpenCV</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Streamlit</span>
+                            <span class="tech-pill">NumPy</span>
+                        </div>
+                        <div class="project-section-links">
+                            <a href="#" class="text-link">GitHub <span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid reveal-stagger">
+                <div class="footer-brand reveal-item">
+                    <h2>Akshat Sinha</h2>
+                    <p>Machine Learning Engineer & Full-Stack Developer. Focused on shipping fast and building
+                        production-ready AI systems.</p>
+                </div>
+
+                <div class="footer-nav reveal-item">
+                    <h3 class="footer-heading">NAVIGATION</h3>
+                    <ul class="footer-links">
+                        <li><a href="./index.html#hero" class="footer-link">Hero Section</a></li>
+                        <li><a href="./index.html#about" class="footer-link">About & Philosophy</a></li>
+                        <li><a href="./index.html#technical-arsenal" class="footer-link">Technical Arsenal</a></li>
+                        <li><a href="./index.html#featured-work" class="footer-link">Featured Work</a></li>
+                        <li><a href="./index.html#certifications" class="footer-link">Certifications</a></li>
+                        <li><a href="./index.html#connect" class="footer-link">Connect</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-connect reveal-item">
+                    <h3 class="footer-heading">CONNECT</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/in/akshat-sinha-dev/" class="footer-link">LinkedIn</a>
+                        </li>
+                        <li><a href="https://github.com/Akshat-sinha-75" class="footer-link">GitHub</a></li>
+                        <li><a href="mailto:akshat.sinha.0503@gmail.com" class="footer-link">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Akshat Sinha. All rights reserved.</div>
+                <button class="back-to-top" id="backToTop">Back to Top ↑</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="projects.js"></script>
+</body>
+
+</html>
