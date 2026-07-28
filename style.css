@@ -822,13 +822,13 @@ body.cursor-light.cursor-hover .cursor-outline {
     transition: background-color 0.4s ease, padding-left 0.4s ease, padding-right 0.4s ease;
 }
 
-.cert-bullet {
+/* .cert-bullet {
     width: 4px;
     height: 4px;
     background-color: var(--accent-dark);
     border-radius: 50%;
 
-}
+} */
 
 .cert-title {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
