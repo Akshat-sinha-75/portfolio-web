@@ -797,7 +797,9 @@ body.cursor-light.cursor-hover .cursor-outline {
 }
 
 .cert-subtitle {
-    font-size: 1.15rem;
+   font-family: var(--font-body);
+   text-align:center;
+   margin-top:-40px;
 }
 
 .cert-list {
