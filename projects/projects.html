@@ -86,30 +86,34 @@
     <!-- Right-Side Dot Navigation -->
     <div class="dot-nav" id="dot-nav">
         <div class="dot-nav-item">
-            <button class="dot-nav-dot active" data-target="project-1" aria-label="Akshavi"></button>
+            <button class="dot-nav-dot active" data-target="project-1" aria-label="ORBIT"></button>
+            <span class="dot-nav-tooltip">ORBIT</span>
+        </div>
+
+        <div class="dot-nav-item">
+            <button class="dot-nav-dot" data-target="project-2" aria-label="Akshavi"></button>
             <span class="dot-nav-tooltip">Akshavi</span>
         </div>
 
         <div class="dot-nav-item">
-            <button class="dot-nav-dot active" data-target="project-2" aria-label="Asmodieus"></button>
+            <button class="dot-nav-dot" data-target="project-3" aria-label="Asmodieus"></button>
             <span class="dot-nav-tooltip">Asmodieus</span>
         </div>
 
         <div class="dot-nav-item">
-            <button class="dot-nav-dot" data-target="project-3" aria-label="Realtime Voice"></button>
-            <span class="dot-nav-tooltip">Quick-Aid</span>
+            <button class="dot-nav-dot" data-target="project-4" aria-label="QuickAid"></button>
+            <span class="dot-nav-tooltip">QuickAid</span>
         </div>
 
         <div class="dot-nav-item">
-            <button class="dot-nav-dot" data-target="project-4" aria-label="BlockEstate"></button>
+            <button class="dot-nav-dot" data-target="project-5" aria-label="BlockEstate"></button>
             <span class="dot-nav-tooltip">BlockEstate</span>
         </div>
 
         <div class="dot-nav-item">
-            <button class="dot-nav-dot" data-target="project-5" aria-label="AI Resume Screener"></button>
+            <button class="dot-nav-dot" data-target="project-6" aria-label="AutoDoc"></button>
             <span class="dot-nav-tooltip">AutoDoc</span>
         </div>
-
     </div>
 
     <main>
@@ -122,15 +126,55 @@
                 <h1 class="projects-page-title">All Projects</h1>
                 <p class="projects-page-subtitle">A comprehensive collection of projects spanning AI/ML, full-stack
                     development, and emerging technologies.</p>
-                <div class="projects-count">5 PROJECTS</div>
+                <div class="projects-count">6 PROJECTS</div>
             </div>
         </section>
 
         <!-- Projects Scroll Container -->
         <div class="projects-scroll-container">
 
-            <!-- Project 1: Akshavi -->
+            <!-- Project 1: ORBIT -->
             <section class="project-section" id="project-1">
+                <div class="project-section-inner">
+                    <div class="project-section-visual">
+                        <div class="project-section-frame hover-zoom">
+                            <img src="../assets/orbit.jpg" alt="ORBIT" class="project-section-img">
+                        </div>
+                    </div>
+                    <div class="project-section-content">
+                        <div class="project-section-header">
+                            <div class="project-section-number">01</div>
+                            <div class="project-status-badge">
+                                <span class="status-indicator-dot"></span>
+                                <span>Working On</span>
+                            </div>
+                        </div>
+                        <h2 class="project-section-title">ORBIT</h2>
+                        <p class="project-section-desc">Orbit is an AI-powered Dead Reckoning system that calculates
+                            accurate location even when GPS signal is completely lost — inside tunnels,
+                            underground parking, or dense urban canyons. Uses only the smartphone's built-in IMU
+                            sensors to estimate speed and direction, then reconstructs the
+                            path using custom trained AI model</p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">PyTorch</span>
+                            <span class="tech-pill">TensorFlow</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">React Native</span>
+                            <span class="tech-pill">OpenStreetMap</span>
+                            <span class="tech-pill">FilterPy</span>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="project-divider">
+                <div class="project-divider-line"></div>
+            </div>
+
+            <!-- Project 2: Akshavi -->
+            <section class="project-section" id="project-2">
                 <div class="project-section-inner">
                     <div class="project-section-visual">
                         <div class="project-section-frame hover-zoom">
@@ -138,7 +182,7 @@
                         </div>
                     </div>
                     <div class="project-section-content">
-                        <div class="project-section-number">01</div>
+                        <div class="project-section-number">02</div>
                         <h2 class="project-section-title">Akshavi</h2>
                         <p class="project-section-desc"> Akshavi is a comprehensive platform designed to enhance safety
                             through real-time tracking, emergency SOS alerts, and a trusted guardian connection system
@@ -167,7 +211,7 @@
                 <div class="project-divider-line"></div>
             </div>
 
-            <section class="project-section" id="project-2">
+            <section class="project-section" id="project-3">
                 <div class="project-section-inner">
                     <div class="project-section-visual">
                         <div class="project-section-frame hover-zoom">
@@ -176,7 +220,7 @@
                         </div>
                     </div>
                     <div class="project-section-content">
-                        <div class="project-section-number">02</div>
+                        <div class="project-section-number">03</div>
                         <h2 class="project-section-title">Asmodieus</h2>
                         <p class="project-section-desc"> Asmodieus is a voice-first Retrieval-Augmented Generation (RAG)
                             platform. Ingests the MSMARCO-XI chunks, embeds, then serves real-time voice queries through
@@ -204,8 +248,8 @@
                 <div class="project-divider-line"></div>
             </div>
 
-            <!-- Project 3: QuickAid -->
-            <section class="project-section" id="project-3">
+            <!-- Project 4: QuickAid -->
+            <section class="project-section" id="project-4">
                 <div class="project-section-inner">
                     <div class="project-section-visual">
                         <div class="project-section-frame hover-zoom">
@@ -214,7 +258,7 @@
                         </div>
                     </div>
                     <div class="project-section-content">
-                        <div class="project-section-number">03</div>
+                        <div class="project-section-number">04</div>
                         <h2 class="project-section-title">QuickAid</h2>
                         <p class="project-section-desc">A dual-stage AI pipeline for wound diagnostics that combines
                             image classification with severity assessment. The system uses deep learning models to
@@ -238,8 +282,8 @@
                 <div class="project-divider-line"></div>
             </div>
 
-            <!-- Project 4: BlockEstate -->
-            <section class="project-section" id="project-4">
+            <!-- Project 5: BlockEstate -->
+            <section class="project-section" id="project-5">
                 <div class="project-section-inner">
                     <div class="project-section-visual">
                         <div class="project-section-frame hover-zoom">
@@ -248,7 +292,7 @@
                         </div>
                     </div>
                     <div class="project-section-content">
-                        <div class="project-section-number">04</div>
+                        <div class="project-section-number">05</div>
                         <h2 class="project-section-title">BlockEstate</h2>
                         <p class="project-section-desc">A decentralized property registration platform built on the
                             Solana blockchain. Enables transparent, tamper-proof land record management with smart
@@ -276,8 +320,8 @@
 
 
 
-            <!-- Project 4: AutoDoc -->
-            <section class="project-section" id="project-5">
+            <!-- Project 6: AutoDoc -->
+            <section class="project-section" id="project-6">
                 <div class="project-section-inner">
                     <div class="project-section-visual">
                         <div class="project-section-frame hover-zoom">
@@ -285,7 +329,7 @@
                         </div>
                     </div>
                     <div class="project-section-content">
-                        <div class="project-section-number">05</div>
+                        <div class="project-section-number">06</div>
                         <h2 class="project-section-title">AutoDoc</h2>
                         <p class="project-section-desc">A GitHub App that listens to every PR merge, summarizes what
                             changed, and automatically appends a structured log entry to your existing README.md — No
